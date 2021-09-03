@@ -9,15 +9,14 @@ int main() {
 	int ivalor = 0;
 	int icontador = 0;
 
-	cin >> "Ingrese un valor para calcular una suma";
-
-	for(i = 1; i <= ivalor; i++){
+	cout << "Ingrese un valor para calcular una suma: ";
+	cin >> ivalor;
+	cout << "Usted ingreso: " << ivalor << endl;
+	for(int i = 1; i <= ivalor; i++){
 		icontador += i;
 	}
 
-	cout << "El resultado es: " +%int,icontador;
-
-	getch();
+	cout << "El resultado es: " << icontador << endl;
 
 	return 0;
 }
