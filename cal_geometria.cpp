@@ -1,82 +1,84 @@
 #include <stdio.h>
+#include <math.h>
+#include <iostream>
 
-int main()
-{
-    int vi_radio = 0;
-    int opcion;
-    float area, l1, l2, radio, h, base;
-    printf("----------------------------------------------------------+\n");
-    printf("Programa para calcular el area de una figura              |\n");
-    printf("Realizado por Oscar Nicolas Berrocal Hernandez            |\n");
-    printf("Hecho el 07/10/2021 Universidad Cooperativa de Colombia   |\n");
-    printf("Hecho el 07/10/2021 rename and add fragment code          |\n");
-    printf("----------------------------------------------------------+\n");
-    printf("\n");
-    printf("-------MENU--------\n");
-    printf("-------------------\n");
-    printf(" 1- Cuadrado\n");
-    printf(" 2- Rectangulo\n");
-    printf(" 3- Triangulo\n");
-    printf(" 4- Ciruclo\n");
-    printf("Por favor introduce una opcion: \n");
-    printf("Opcion por defecto es = 1");
-    //scanf("%d", &opcion);
-    opcion = 1;
+using namespace std;
 
-    switch(opcion)
-    {
-        case 1:
-        {
-            printf("Intro lado: ");
-            //scanf("%f", &l1);
-	    vi_lado = 3;
+int main() {
 
-            area=l1*l1;
-            printf("El area es de: %f", area);
+	int vi_opcion  = 1;
+	float vf_area  = 0;
+	bool vb_opcion = false;
 
+	int vi_base=0;
+        int vi_altura = 0;
+	int vi_radio = 0;
+
+	cout << " + -----------------------------------------------------------------+\n";
+        cout << " | Programa para calcular el area de una figura                     |\n";
+        cout << " | Realizado por Oscar Nicolas Berrocal Hernandez                   |\n";
+        cout << " | Hecho el 07/10/2021 Universidad Cooperativa de Colombia          |\n";
+        cout << " | Hecho el 14/10/2021. renombrar y agregar código de fragmento     |\n";
+        cout << " + -----------------------------------------------------------------+\n";
+        cout << "\n";
+
+	cout << "Seleccionar una opcion geometrica para calcular el area\n";
+	cout << "Circulo   [1] por defecto\n";
+	cout << "Triangulo [2] \n";
+	cout << "Cuadrado  [3] \n";
+	cout << "[1] :";
+
+	cout << "Opcion por defecto = 1";
+	//cin >> vi_opcion;
+	vi_opcion = 1;
+
+	cout << "Usted ingreso: " << vi_opcion << endl;
+
+	if (vi_opcion < 1 ){
+		vi_opcion = 1;
+		vb_opcion = true;
+	}else if (vi_opcion > 3 ){
+		vi_opcion = 1;
+		vb_opcion = true;
+	}
+
+	if (vb_opcion) {
+		cout << "ingreso una opcion fuera de rango, se asigna por defecto 1\n";
+	}
+
+	switch(vi_opcion) {
+	  case 1:
+    	    // Circulo
+	    cout << "Ingrese el Radio del circulo : ";
+	    //cin >> vi_radio;
+	    vi_radio = 3;
+
+	    cout << "\n";
+	    vf_area = (vi_radio * vi_radio) * 3.14151692;
+	    break;
+	  case 2:
+	    // Triangulo
+	    cout << "Ingrese la altura : ";
+	    cin >> vi_altura;
+	    cout << "\n";
+
+	    cout << "Ingrese la base : ";
+            cin >> vi_base;
+            cout << "\n";
+
+	    vf_area = (vi_base * vi_altura) / 2;
+	    break;
+	  default:
+	    // Cuadrado
+	    cout << "Ingrese longitud de la base : ";
+            cin >> vi_base;
+            cout << "\n";
+
+	    vf_area = vi_base * vi_base;
             break;
-        }
+	}
 
-        case 2:
-        {
-            printf("Intro lado 1: ");
-            scanf("%f", &l1);
+	cout << "La area es => " << vf_area << endl; 
 
-            printf("Intro lado 2: ");
-            scanf("%f", &l2);
-
-            area=l1*l2;
-            printf("El area es de: %f", area);
-
-            break;
-        }
-
-        case 3:
-        {
-            printf("Intro base: ");
-            scanf("%f", &base);
-
-            printf("Intro altura: ");
-            scanf("%f", &h);
-
-            area=(base*h)/2;
-            printf("El area es de: %f", area);
-
-            break;
-        }
-
-        case 4:
-        {
-            printf("Intro radio: ");
-            scanf("%f", &radio);
-
-            area=(radio*radio)*3.14;
-            printf("El area es de: %f", area);
-
-            break;
-        }
-
-        default:
-            printf("La opcion no es correcta");
-    }
+	return 0;
 }
