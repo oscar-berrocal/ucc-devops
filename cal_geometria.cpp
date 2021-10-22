@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -10,9 +11,11 @@ int main() {
 	float vf_area  = 0;
 	bool vb_opcion = false;
 
+
 	int vi_base=0;
         int vi_altura = 0;
 	int vi_radio = 0;
+	double vd_raiz = 0;
 
 	cout << " + -----------------------------------------------------------------+\n";
         cout << " | Programa para calcular el area de una figura                     |\n";
@@ -78,7 +81,12 @@ int main() {
             break;
 	}
 
-	cout << "La area es => " << vf_area << endl; 
+	cout << "La area es => " << vf_area << endl;
 
+	//Archivo funcion
+	//vf_area calcular la raiz cuadrada en una variable y imprimir
+
+	vd_raiz = sqrt(vf_area);
+	cout << "La raiz cuadrada de " << vf_area << " es " << vd_raiz;
 	return 0;
 }
