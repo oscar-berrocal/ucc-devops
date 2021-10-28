@@ -10,19 +10,18 @@ int main() {
 	int vi_opcion  = 1;
 	float vf_area  = 0;
 	bool vb_opcion = false;
-
+	float raiz = 0;
 
 	int vi_base=0;
         int vi_altura = 0;
 	int vi_radio = 0;
-	double vd_raiz = 0;
+	int vi_dato = 0;
 
 	cout << " + -----------------------------------------------------------------+\n";
         cout << " | Programa para calcular el area de una figura                     |\n";
         cout << " | Realizado por Oscar Nicolas Berrocal Hernandez                   |\n";
         cout << " | Hecho el 07/10/2021 Universidad Cooperativa de Colombia          |\n";
         cout << " | Hecho el 14/10/2021. renombrar y agregar código de fragmento     |\n";
-	cout << " | Hecho el 21/10/2021. realiza la raiz cuadrada del area           |\n";
         cout << " + -----------------------------------------------------------------+\n";
         cout << "\n";
 
@@ -82,12 +81,16 @@ int main() {
             break;
 	}
 
-	cout << "La area es => " << vf_area << endl;
+	cout << "La area es => " << vf_area << endl; 
+	
+	cout << "Ingresar un numero para obtener la raiz cuadrada: ";
+	cout << "Numerp por defecto es: ";
+	vf_area = 10;
 
-	//Archivo funcion
-	//vf_area calcular la raiz cuadrada en una variable y imprimir
+	raiz = sqrt(vi_dato);
 
-	vd_raiz = sqrt(vf_area);
-	cout << "La raiz cuadrada de " << vf_area << " es " << vd_raiz;
+	cout << "La raiz cuadrada de " << dato << " es " << raiz << endl; 
+
+
 	return 0;
 }

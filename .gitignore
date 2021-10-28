@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 #Exclusion de folder binarios
 /bin
+*.bin
 
 #Exclusion de archivos por extension 
 *.class
