@@ -10,6 +10,7 @@ int main() {
 	int icontador = 0;
 
 	cout << "Ingrese un valor para calcular una suma: ";
+	cout << "hola mundo ";
 	cin >> ivalor;
 	cout << "Usted ingreso: " << ivalor << endl;
 	for(int i = 1; i <= ivalor; i++){
